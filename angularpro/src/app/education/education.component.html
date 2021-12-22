@@ -1,0 +1,22 @@
+
+<h1>Education details</h1>
+<table class="table table-boder">
+
+  <thead>
+  <tr>
+    <th>ID</th>
+    <th>Education</th>
+    <th>Board/University</th>
+    <th>Percentage</th>
+  </tr>
+</thead>
+<tbody>
+  <tr *ngFor="let education of education ">
+    <td>{{education.id}}</td>
+    <td>{{education.education}}</td>
+    <td>{{education.board}}</td>
+    <td>{{education.percentage}}</td>
+  </tr>
+</tbody>
+
+</table>

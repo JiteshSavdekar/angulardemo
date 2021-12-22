@@ -7,28 +7,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ParsoninfoComponent implements OnInit {
 
-  firstname:string="";
-  lastname:string="";
-  email:string="";
-  age:number=0;
+
 
 
   person={
-    "firstname":"Jitesh",
-    "lastname":"Savdekar",
-    "email":"jitusavdekar@1996gmail.com",
-    "age":35,
-    "date":new Date("1996-5-25")
+    "Fullname":"Jitesh Savdekar",
+    "ResidentialAddress":"Gurudwara Colony, Akurdi, Pune, 411035",
+    "LanguagesKnown":"English, Hindi, Marathi",
+    "MaritalStatus":"Single",
+    "Hobbies":"Travelling & watching Movies",
+
   };
   constructor() {
 
   }
 
   ngOnInit(): void {
-    this.firstname="Jitesh";
-    this.lastname="Savdekar";
-    this.email="jitusavdekar@455gmail.com";
-    this.age=35;
 
   }
 

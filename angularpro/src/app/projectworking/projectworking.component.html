@@ -1,0 +1,19 @@
+<h1>Project Details</h1>
+<table class="table ">
+<thead>
+  <tr>
+    <th>Project Type</th>
+    <th>Project Details</th>
+  </tr>
+</thead>
+<tbody>
+  <tr *ngFor="let pk of project">
+    <td>{{pk.projecttype}}</td>
+    <td>
+       <li *ngFor="let pk of pk.projectSets">
+         {{pk}}
+       </li>
+    </td>
+  </tr>
+</tbody>
+</table>
