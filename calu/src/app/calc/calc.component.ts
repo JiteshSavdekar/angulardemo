@@ -28,4 +28,8 @@ export class CalcComponent implements OnInit {
     //alert(parseInt(n1)/parseInt(n2));
     this.result=parseInt(n1)/parseInt(n2);
   }
+  pace(n1 :string,n2 :string):void{
+    //alert(parseInt(n1)/parseInt(n2));
+    this.result=parseInt(n1)%parseInt(n2);
+  }
 }
