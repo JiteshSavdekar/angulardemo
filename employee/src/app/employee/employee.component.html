@@ -1,0 +1,84 @@
+<div class="row m-1">
+  <div class="col-sm-2">
+    id:
+  </div>
+
+  <div class="col-sm-2">
+    <input type="text" name=id class="form-control" [(ngModel)]=" newemployee.id">
+  </div>
+</div>
+
+<div class="row m-1">
+  <div class="col-sm-2">
+    name:
+
+</div>
+  <div class="col-sm-2">
+    <input type="text" name=name class="form-control" [(ngModel)]=" newemployee.name">
+  </div></div>
+  <div class="row m-1">
+  <div class="col-sm-2">
+    lastname:
+  </div>
+  <div class="col-sm-2">
+    <input type="text" name=lastname class="form-control" [(ngModel)]=" newemployee.lastname">
+  </div></div>
+  <div class="row m-1">
+  <div class="col-sm-2">
+    salary:
+  </div>
+  <div class="col-sm-2">
+    <input type="text" name=salary class="form-control" [(ngModel)]=" newemployee.salary">
+  </div>
+</div>
+<div class="row m-1">
+  <div class="col-sm-2">
+    empid:
+  </div>
+  <div class="col-sm-2">
+    <input type="text" name=empid class="form-control" [(ngModel)]=" newemployee.empid">
+  </div></div>
+<div class="row">
+  <div class="col">
+    <button class="btn btn-info m-1" (click)="save()"*ngIf="updateIdx ===-1">Save</button>
+     <button class="btn btn-info m-1" (click)="update()"*ngIf="updateIdx !==-1">Update</button>
+    <button class="btn btn-success" (click)="Reset()">Reset</button>
+  </div>
+</div>
+
+
+
+<div class="card">
+  <div class="card-header">
+    Employee Details
+  </div>
+  <div class="card-body">
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <td>Id</td>
+          <td>name</td>
+          <td>lastname</td>
+          <td>salary</td>
+          <td>EmpId</td>
+          <td>Action</td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let employee of employeelist; let i=index">
+          <td>{{employee.id}}</td>
+          <td>{{employee.name}}</td>
+          <td>{{employee.lastname}}</td>
+          <td>{{employee.salary}}</td>
+          <td>{{employee.empid}}</td>
+
+      <td>
+        <button class="btn btn-success m-1" (click)="edit(i)">Edit</button>
+        <button class="btn btn-danger m-1" (click)="delete(i)">Delete</button>
+      </td>
+        </tr>
+      </tbody>
+
+    </table>
+  </div>
+</div>
